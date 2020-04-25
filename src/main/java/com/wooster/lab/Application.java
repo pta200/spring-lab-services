@@ -1,4 +1,4 @@
-package com.wooster.studentservice;
+package com.wooster.lab;
 
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.boot.SpringApplication;

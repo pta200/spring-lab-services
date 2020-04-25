@@ -1,4 +1,4 @@
-package com.wooster.studentservice;
+package com.wooster.lab.bean;
 
 public class Student {
 	

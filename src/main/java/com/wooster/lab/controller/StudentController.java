@@ -1,8 +1,10 @@
-package com.wooster.studentservice;
+package com.wooster.lab.controller;
 
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.wooster.lab.bean.Student;
 
 import java.util.Date;
  

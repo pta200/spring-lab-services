@@ -1,13 +1,15 @@
-package com.wooster.studentservice;
+package com.wooster.lab;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class StudentserviceApplicationTests {
+class LabApplicationTests {
 
+	
 	@Test
 	void contextLoads() {
 	}
+	
 
 }
