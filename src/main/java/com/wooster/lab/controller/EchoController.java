@@ -4,25 +4,25 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.wooster.lab.bean.Student;
+import com.wooster.lab.bean.Person;
 
 import java.util.Date;
  
 @RestController
-@RequestMapping("/student")
-public class StudentController {
+@RequestMapping("/echo")
+public class EchoController {
 	
-	@RequestMapping(value = "/echoStudentName/{name}")
-    public String echoStudentName(@PathVariable(name = "name") String name) 
+	@RequestMapping(value = "/echoName/{name}")
+    public String echoName(@PathVariable(name = "name") String name) 
     {
         return "hello  <strong style=\"color: red;\">" + name + " </strong> Responsed on : " 
         		+ new Date();
     }
  
-    @RequestMapping(value = "/getStudentDetails/{name}")
-    public Student getStudentDetails(@PathVariable(name = "name") String name) 
+    @RequestMapping(value = "/getDetails/{name}")
+    public Person getNameDetails(@PathVariable(name = "name") String name) 
     {
-        return new Student(name, "Pune", "MCA");
+        return new Person(name, "Pune", "MCA");
     }
 
 }

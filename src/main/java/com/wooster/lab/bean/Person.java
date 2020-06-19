@@ -1,12 +1,12 @@
 package com.wooster.lab.bean;
 
-public class Student {
+public class Person {
 	
 	String name;
     String address;
     String cls;
  
-    public Student(String name, String address, String cls) {
+    public Person(String name, String address, String cls) {
         super();
         this.name = name;
         this.address = address;
