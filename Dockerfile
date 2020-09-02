@@ -2,8 +2,8 @@
 # https://hub.docker.com/_/maven
 FROM maven:3.5-jdk-8-alpine as builder
 
-RUN addgroup -S spring && adduser -S spring -G spring
-USER spring:spring
+#RUN addgroup -S spring && adduser -S spring -G spring
+#USER spring:spring
 
 # Copy local code to the container image.
 WORKDIR /app
