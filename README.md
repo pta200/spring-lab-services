@@ -1,6 +1,6 @@
-# Sprint Cloud Application
+# Spring Mircoservice
 
-A Spring Boot Microservice to learn the following:
+A Spring Boot microservice to learn the following:
 
 * Develop Spring Restfull APIs
 * Implment Java Asterisk Manager Interface API implementation for click to call service
