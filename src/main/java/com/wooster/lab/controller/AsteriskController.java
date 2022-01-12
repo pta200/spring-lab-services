@@ -22,7 +22,8 @@ import org.asteriskjava.manager.action.OriginateAction;
 import org.asteriskjava.manager.response.ManagerResponse;
 
 /**
- * Controller to perform call back via asterisk manager interface
+ * Controller to perform call back via asterisk manager interface. Call back is where Asterisk first
+ * dials the users number and once the channel is connected calls the destination number.
  * @author pta200
  *
  */
@@ -39,6 +40,11 @@ public class AsteriskController {
 	@Value("{diaplan.context")
 	private String dialplanContext;
 
+	/**
+	 * Place a call using Asterisk AMI originate command
+	 * @param action CallBackAction request object
+	 * @return success/failure of call back setup
+	 */
 	@PostMapping("callback")
 	public ResponseEntity<?> callback(@Valid @RequestBody CallBackAction action) {
 		
@@ -48,8 +54,8 @@ public class AsteriskController {
 			originate.setChannel("SIP/" + sipPeer + "/" + action.getFromNumber());
 			originate.setContext(dialplanContext);
 			originate.setExten(action.getToNumber());
-			originate.setPriority(new Integer(1));
-			originate.setTimeout(new Long(30000));
+			originate.setPriority(Integer.valueOf(1));
+			originate.setTimeout(Long.valueOf(30000));
 			
 			ManagerResponse response = amiService.sendCall(originate);
 			log.info(response.getMessage() + response.getEvents());

@@ -1,5 +1,10 @@
 package com.wooster.lab.bean;
 
+/**
+ * Call back request object
+ * @author pta200
+ *
+ */
 public class CallBackAction {
 	
 	private String toNumber;
